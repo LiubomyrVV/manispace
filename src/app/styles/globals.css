@@ -1,31 +1,45 @@
+@import "./lib/fonts.css";
 @import "tailwindcss";
+/* TailwindCSS specificity strength from weakest to strongest: base, components, utilities */
 
+/* Theme variables are special CSS variables */
+@theme {
+    --color-primary: oklch(0.7873 0.062 60.2); 
+    --color-secondary: oklch(0.9797 0.0126 86.83); 
+    --color-accent: oklch(0.886 0.0509 58.36); 
+    /* --color-brand:;  */
+
+    --color-grey: oklch(0.5658 0 0);
+    --color-black: oklch(0.3171 0 0);
+    --color-light: oklch(0.9797 0.0126 86.83);
+    --color-white:  oklch(1 0 0);
+
+    --font-sans: 'Montserrat', sans-serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-inter: 'Inter', sans-serif;
+}
 
 @layer base {
-  :root {
-    --color-primary: 243 182 210; 
-    --color-accent: 160 100% 90%;
-    --font-main: 'Inter', sans-serif;
-  }
-
+  /* :root {} */
   html {
     scroll-behavior: smooth;
   }
 }
 
+
 @layer components {
-
+  
   .btn-primary {
-    @apply bg-pink-400 text-white py-2 px-4 rounded-lg hover:bg-pink-500 transition;
+    @apply bg-pink-500 text-white py-2 px-4 rounded-lg hover:bg-pink-500 transition;
   }
-
+  
   .section-padding {
     @apply py-16 px-4 md:px-8;
   }
 }
 
 @layer utilities {
-
+  
   @keyframes fade-in {
     0% {
       opacity: 0;
@@ -36,7 +50,7 @@
       transform: translateY(0);
     }
   }
-
+  
   .fade-in {
     animation: fade-in 0.6s ease-out both;
   }
