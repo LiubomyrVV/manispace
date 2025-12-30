@@ -1,6 +1,6 @@
 import React from 'react';
-import { Header } from '../widgets/Header';
-import { Footer } from '../widgets/Footer';
+import { Header } from '../../widgets/Header';
+import { Footer } from '../../widgets/Footer';
 
 export const HomePage: React.FC = () => {
     return (
